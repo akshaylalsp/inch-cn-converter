@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">inch to cm</string>
+    <string name="length_in_cm">length in Cm</string>
+    <string name="length_in_inch">length in inch</string>
 </resources>
