@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var inchInput:EditText
     private lateinit var cmInput:EditText
     private lateinit var convertButton:Button
+    private lateinit var clearButton:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +19,8 @@ class MainActivity : AppCompatActivity() {
         convertButton = findViewById(R.id.convertButton)
         cmInput = findViewById(R.id.cmText)
         inchInput = findViewById(R.id.inchText)
+        clearButton = findViewById(R.id.clearButton)
+
         convertButton.setOnClickListener{
             if (cmInput.text.isEmpty() && inchInput.text.isNotEmpty()){
                 val inchtext = inchInput.text.toString()
@@ -30,6 +33,10 @@ class MainActivity : AppCompatActivity() {
                 inchInput.setText(answer.toString())
             }
             Toast.makeText(this,"button clicked",Toast.LENGTH_SHORT).show()
+        }
+        clearButton.setOnClickListener{
+            inchInput.setText("")
+            cmInput.setText("")
         }
     }
 
