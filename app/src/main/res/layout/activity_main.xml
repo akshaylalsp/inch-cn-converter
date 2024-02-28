@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/length_in_cm"
+        android:inputType="number"
         android:paddingTop="50dp"
         android:paddingEnd="25dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,6 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/length_in_inch"
+        android:inputType="number"
         android:paddingTop="25dp"
         app:layout_constraintTop_toBottomOf="@+id/cmText"
         tools:layout_editor_absoluteX="0dp" />
@@ -29,10 +31,22 @@
         android:id="@+id/convertButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
         android:text="convert"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inchText"
-        app:layout_constraintVertical_bias="0.15" />
+        app:layout_constraintVertical_bias="0.161" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="clear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.761"
+        app:layout_constraintStart_toEndOf="@+id/convertButton"
+        app:layout_constraintTop_toBottomOf="@+id/inchText"
+        app:layout_constraintVertical_bias="0.161" />
 </androidx.constraintlayout.widget.ConstraintLayout>
